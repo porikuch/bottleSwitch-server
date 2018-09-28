@@ -1,0 +1,2 @@
+class BottleDriftHistory < ApplicationRecord
+end
