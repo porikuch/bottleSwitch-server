@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+if User.count == 0
+  User.create(name: 'ueyuki',
+              password: Digest::SHA256.hexdigest('ueyuki'),
+              nickname: 'ueyuki'
+             )
+  User.create(name: 'ishiireo',
+              password: Digest::SHA256.hexdigest('ishiireo'),
+              nickname: 'ishiireo'
+             )
+end
