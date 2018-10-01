@@ -1,9 +1,9 @@
 class BottlesController < ApplicationController
   def create
-    id = User.find_by(id: params[name]).id
+    created_user_id = (User.find_by(name: params[:name])).id.to_i
     Bottle.create(title: params[:title],
                   body: params[:body],
-                  created_user_id: id
+                  created_user_id: created_user_id
                  )
     render json: {status: true}
   end
