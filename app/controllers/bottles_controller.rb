@@ -7,4 +7,7 @@ class BottlesController < ApplicationController
                  )
     render json: {status: true}
   end
+
+  def index
+  end
 end

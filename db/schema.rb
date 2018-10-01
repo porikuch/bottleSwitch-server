@@ -10,42 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180928085542) do
+ActiveRecord::Schema.define(version: 20181001090055) do
 
   create_table "bottle_drift_histories", force: :cascade do |t|
-    t.integer "bottle_id"
-    t.float "place_lat"
-    t.float "place_lng"
+    t.integer "bottle_id", null: false
+    t.float "place_lat", null: false
+    t.float "place_lng", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "bottles", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.integer "created_user_id"
+    t.string "title", null: false
+    t.text "body", null: false
+    t.integer "created_user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "friends", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "friend_id"
+    t.integer "user_id", null: false
+    t.integer "friend_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "have_bottles", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "bottle_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "massages", force: :cascade do |t|
-    t.integer "friend_id"
-    t.text "message"
+    t.integer "friend_id", null: false
+    t.text "message", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "password"
-    t.string "nickname"
+    t.string "name", null: false
+    t.string "password", null: false
+    t.string "nickname", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
