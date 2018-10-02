@@ -16,3 +16,19 @@ if User.count == 0
               nickname: 'ishiireo'
              )
 end
+
+if Bottle.count == 0
+  Bottle.create(title: 'hoge',
+                body: 'poge',
+                created_user_id: 1
+               )
+  Bottle.create(title: 'hogehoge',
+                body: 'pogepoge',
+                created_user_id: 1
+               )
+  Bottle.create(title: 'hogehogehoge',
+                body: 'pogepogepoge',
+                created_user_id: 2
+               )
+end
+end
