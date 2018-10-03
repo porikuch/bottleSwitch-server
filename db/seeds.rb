@@ -31,4 +31,15 @@ if Bottle.count == 0
                 created_user_id: 2
                )
 end
+
+if HaveBottle.count == 0
+  HaveBottle.create(user_id: 1,
+                    bottle_id: 1
+                   )
+  HaveBottle.create(user_id: 2,
+                    bottle_id: 2
+                   )
+  HaveBottle.create(user_id: 1,
+                    bottle_id: 3
+                   )
 end
