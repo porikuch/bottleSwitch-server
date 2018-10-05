@@ -15,4 +15,9 @@ class BottlesController < ApplicationController
 
     render json: {bottles: bottle_index}
   end
+
+  def show
+    show = Bottle.select(:title, :body).find_by(id: params[:id])
+    render json: {bottle: show}
+  end
 end
