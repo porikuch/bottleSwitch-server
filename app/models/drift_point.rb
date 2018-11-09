@@ -1,0 +1,2 @@
+class DriftPoint < ApplicationRecord
+end
