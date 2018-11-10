@@ -71,4 +71,28 @@ if DriftPoint.count == 0
                     place_lat: 26.694158,
                     place_lng: 127.877932
                    )
+  DriftPoint.create(name: '清水寺',
+                    place_lat: 34.994844,
+                    place_lng: 135.785059
+                   )
+  DriftPoint.create(name: '姫路城',
+                    place_lat: 34.838003,
+                    place_lng: 134.693169
+                   )
+  DriftPoint.create(name: '厳島神社',
+                    place_lat: 34.295701,
+                    place_lng: 132.319895
+                   )
+  DriftPoint.create(name: '皇居',
+                    place_lat: 35.684646,
+                    place_lng: 139.752016
+                   )
+  DriftPoint.create(name: '桜島',
+                    place_lat: 31.593095,
+                    place_lng: 130.666346
+                   )
+  DriftPoint.create(name: '中尊寺',
+                    place_lat: 39.593095,
+                    place_lng: 141.099133
+                   )
 end
