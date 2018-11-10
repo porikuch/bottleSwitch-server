@@ -10,8 +10,7 @@ class BottlesController < ApplicationController
 
   def index
     find_user_id = (User.find_by(name: params[:name])).id.to_i
-
-    bottle_index = (Bottle.joins(:user)).joins(:have_bottles).where(have_bottles: {user_id: find_user_id}).select(:id, :title, :nickname)
+    bottle_index = (Bottle.joins(:user)).joins(:have_bottles).where(have_bottles: {user_id: find_user_id}).select(:id, :title, :nickname, :created_user_id)
 
     render json: {bottles: bottle_index}
   end
