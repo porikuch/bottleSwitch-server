@@ -1,0 +1,2 @@
+class ReciveBottleController < ApplicationController
+end

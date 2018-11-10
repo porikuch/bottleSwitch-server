@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :users
   resources :bottles
   resources :logins
+  resources :release_bottle
+  resources :receive_bottle
 end
