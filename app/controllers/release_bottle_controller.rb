@@ -6,6 +6,6 @@ class ReleaseBottleController < ApplicationController
     BottleDriftHistory.create(bottle_id: bottle_id,
                               drift_point_id: drift_point_id
                              )
-    render json: {status: true, drift_point_id: drift_point_id}
+    render json: {status: true}
   end
 end
