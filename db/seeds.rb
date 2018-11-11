@@ -46,6 +46,15 @@ if HaveBottle.count == 0
                    )
 end
 
+if Friend.count == 0
+  Friend.create(user_id: 1,
+                friend_id: 2
+               )
+  Friend.create(user_id: 2,
+                friend_id: 1
+               )
+end
+
 if DriftPoint.count == 0
   DriftPoint.create(name: '東京タワー',
                     place_lat: 35.710063,

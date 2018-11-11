@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :logins
   resources :release_bottle
   resources :receive_bottle
-  resources :frind
+  resources :friends
 end

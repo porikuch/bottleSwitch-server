@@ -4,8 +4,8 @@ class FriendsController < ApplicationController
 
   def index
     find_user_id = params[:id].to_i
-    frineds_index = Frined.where(user_id: find_user_id).select(:frined_id)
+    friends_index = Friend.where(user_id: find_user_id).select(:friend_id)
 
-    render json: {friends: frineds_index}
+    render json: {friends: friends_index}
   end
 end
